@@ -15,19 +15,19 @@
     }
 
     :root {
-      --main-bg-color: #ffffff;
+      --main-bg-color: #000000;
       --main-text-color: #333333;
-      --nav-bg-color: #ffffff;
-      --nav-link-color: #555555;
+      --nav-bg-color: #000000;
+      --nav-link-color: #ffffff;
       --nav-link-hover-color: #ff6f61;
-      --card-bg-color: #ffffff;
-      --card-text-color: #333333;
+      --card-bg-color: #292929;
+      --card-text-color: #ffffff;
       --card-footer-bg-color: #f8f9fa;
       --footer-bg-color: #111111;
       --header-text-color: #ffffff;
       --btn-add-to-cart-color: #ff6f61;
       --btn-hover-color: #ff9478;
-      --btn-complete-purchase-color: #c20000;
+      --btn-complete-purchase-color: #ffffff;
     }
 
     body {
@@ -40,7 +40,7 @@
     }
 
     header {
-      background: url('f.jpg') no-repeat center center;
+      background: url('n.jpg') no-repeat center center;
       background-size: cover;
       text-align: center;
       padding: 155px 0;
@@ -49,13 +49,12 @@
 
     .navbar {
       background-color: var(--nav-bg-color);
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
-    .navbar-brand img {
-      height: 75px;
-      width: 75px;
-      margin-right: 10px;
+    .navbar-brand {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     .nav-link {
@@ -184,20 +183,19 @@
 </head>
 <body>
   <!-- Navigation-->
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container px-4 px-lg-5">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container px-4 px-lg-5 position-relative">
       <a class="navbar-brand" href="index.html">
-        <img src="m.png" alt="شعار شجرة العطور">
+        <img src="n.PNG" alt="شعار niche" style="height: 125px; width: 140px;">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
-          <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-shopping-bag"></i> تسوق</a></li>
-          <li class="nav-item"><a class="nav-link" href="cart.html"><i class="fas fa-shopping-cart"></i> السلة <span id="cart-count" class="badge bg-secondary">0</span></a></li>
-          <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-phone-alt"></i> اتصل بنا</a></li>
+          <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fas fa-home"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="sections.html"><i class="fas fa-shopping-bag"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html"><i class="fas fa-shopping-cart"></i> <span id="cart-count" class="badge bg-secondary">0</span></a></li>
         </ul>
       </div>
     </div>
@@ -223,7 +221,8 @@
   </section>
   <!-- Footer-->
   <footer class="py-5">
-    <div class="container"><p class="m-0 text-center">حقوق النشر &copy; شجرة العطور 2024</p></div>
+    <div class="container"><p class="m-0 text-center">حقوق النشر &copy; niche 2024</p></div>
+    <div class="container"><p class="m-0 text-left"><a href="mailto:oo3ooi@icloud.com" class="text-white"><i class="fas fa-phone-alt"></i> اتصل بنا</a></p></div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
