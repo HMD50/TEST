@@ -47,19 +47,28 @@
     }
 
     .navbar {
-      background-color: #000000;
+      background-color: #222222;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
     }
 
     .navbar-brand {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .navbar-brand img {
+      height: 100px;
+      width: auto;
     }
 
     .nav-link {
       color: #ffffff !important;
       font-weight: 450;
-      padding: 10px;
+      padding: 5px;
+      transition: color 0.3s;
     }
 
     .nav-link:hover {
@@ -70,6 +79,18 @@
     .nav-item {
       display: flex;
       align-items: center;
+      position: relative;
+    }
+
+    .cart-count {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: #ff6f61;
+      color: #ffffff;
+      border-radius: 50%;
+      padding: 2px 4px;
+      font-size: 10px; /* تصغير حجم الأرقام */
     }
 
     .card {
@@ -126,8 +147,10 @@
     }
 
     footer {
-      background-color: #111111;
-      color: white;
+      background-color: #ffffff;
+      color: black;
+      padding: 20px 0;
+      text-align: center;
     }
 
     .remove-item {
@@ -137,6 +160,11 @@
       position: absolute;
       top: 5px;
       right: 5px;
+    }
+
+    .payment-methods img {
+      height: 30px;
+      margin: 0 10px;
     }
 
     @media (max-width: 576px) {
@@ -188,18 +216,27 @@
 </head>
 <body>
   <nav class="navbar navbar-expand-lg">
-    <div class="container px-4 px-lg-5 position-relative">
-      <a class="navbar-brand" href="index.html">
-        <img src="n.PNG" alt="شعار niche" style="height: 125px; width: 140px;">
-      </a>
-      <div class="justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i></a></li>
-          <li class="nav-item"><a class="nav-link" href="sections.html"><i class="fas fa-shopping-bag"></i></a></li>
-        </ul>
-      </div>
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="cart.html"><i class="fas fa-shopping-cart"></i> <span id="cart-count" class="badge bg-secondary">0</span></a></li>
+    <div class="container position-relative">
+      <ul class="navbar-nav d-flex flex-row order-lg-first">
+        <li class="nav-item"><a class="nav-link" href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        <li class="nav-item"><a class="nav-link" href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a></li>
+        <li class="nav-item"><a class="nav-link" href="mailto:example@example.com"><i class="fas fa-envelope"></i></a></li>
+      </ul>
+      <a class="navbar-brand" href="index.html"><img src="n.png" alt="niche logo"></a>
+      <ul class="navbar-nav d-flex flex-row order-lg-last">
+        <!-- هنا تم إضافة أيقونة التسوق -->
+        <li class="nav-item">
+          <a class="nav-link" href="sections.html">
+            <i class="fas fa-shopping-bag"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="cart.html">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count" id="cart-count">0</span>
+          </a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="login.html"><i class="fas fa-user"></i></a></li>
       </ul>
     </div>
   </nav>
@@ -224,8 +261,14 @@
     </div>
   </section>
   <footer class="py-5">
-    <div class="container"><p class="m-0 text-center">حقوق النشر &copy; niche 2024</p></div>
-    <div class="container"><p class="m-0 text-left"><a href="mailto:oo3ooi@icloud.com" class="text-white"><i class="fas fa-phone-alt"></i> اتصل بنا</a></p></div>
+    <div class="container">
+      <p class="m-0 text-center text-black">حقوق النشر &copy; niche 2024</p>
+      <div class="payment-methods d-flex justify-content-start">
+        <img src="x.png" alt="Payment Method 1">
+        <img src="xx.png" alt="Payment Method 2">
+        <img src="xxx.png" alt="Payment Method 3">
+      </div>
+    </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
