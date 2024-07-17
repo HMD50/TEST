@@ -250,7 +250,7 @@
         <!-- سيتم إضافة عناصر السلة هنا بواسطة JavaScript -->
       </div>
       <div class="text-center">
-        <h4 id="total-price">إجمالي السعر: 0 ريال سعودي</h4>
+        <h4 id="total-price">إجمالي السعر: 0 ر.س</h4>
         <button class="btn btn-complete-purchase mt-3">إتمام الشراء</button>
       </div>
     </div>
@@ -260,9 +260,9 @@
     <div class="container">
         <p class="m-0 text-center" style="color: #000000;">حقوق النشر &copy; niche 2024</p>
         <div class="payment-methods d-flex justify-content-end">
-            <img src="x.png" alt="Payment Method 1">
-            <img src="xx.png" alt="Payment Method 2">
-            <img src="xxx.png" alt="Payment Method 3">
+          <img src="op.png" alt="Payment Method 1">
+          <img src="uui.png" alt="Payment Method 2">
+          <img src="pyl.png" alt="Payment Method 3">
         </div>
     </div>
 </footer>
@@ -290,7 +290,7 @@
             <div class="card-body p-4">
               <div class="text-center">
                 <h5 class="fw-bolder">${product.name}</h5>
-                ${product.price} ريال سعودي
+                ${product.price} ر.س
                 <div class="quantity-controls mt-3">
                   <button class="btn btn-complete-purchase" onclick="decreaseQuantity(${index})">-</button>
                   <span class="mx-2">${product.quantity}</span>
@@ -303,7 +303,7 @@
         cartItemsContainer.appendChild(productElement);
         totalPrice += parseFloat(product.price) * product.quantity;
       });
-      totalPriceElement.textContent = `إجمالي السعر: ${totalPrice.toFixed(2)} ريال سعودي`;
+      totalPriceElement.textContent = `إجمالي السعر: ${totalPrice.toFixed(2)} ر.س`;
       cartCount.textContent = cart.reduce((total, product) => total + product.quantity, 0);
     }
 
